@@ -1,3 +1,4 @@
+import { PageData } from './../.svelte-kit/types/src/routes/$types.d';
 // See https://kit.svelte.dev/docs/types#app
 // for information about these interfaces
 declare global {
@@ -9,4 +10,4 @@ declare global {
 	}
 }
 
-export {};
+export { PageData };
