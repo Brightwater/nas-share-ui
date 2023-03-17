@@ -85,9 +85,9 @@
         {#if isRefreshTokenExpired(subscribedLoginData)}
             <form>
                 <label for="username"> Username: </label>
-                    <input id="username" type="text" bind:value={loginParams.username}>
+                    <input id="username" type="text" bind:value={loginParams.username} required>
                 <label for="password"> Password: </label>
-                    <input id="password" type="password" bind:value={loginParams.password}>
+                    <input id="password" type="password" bind:value={loginParams.password} required>
                 <button on:click={login}> Submit </button>
             </form>
         {:else if !$authData.jwt}    
@@ -146,8 +146,8 @@
         }
 
         button {
-            background-color: $rowColorB;
-            color: #fff;
+            background-color: $theadColor;
+            color: $textColor;
             border: none;
             border-radius: 5px;
             padding: 10px 20px;
